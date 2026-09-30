@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+release-test/
+release/
+build/
+
+# Electron packaged output
+win-unpacked/
+*.exe
+
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
