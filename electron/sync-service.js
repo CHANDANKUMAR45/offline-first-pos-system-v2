@@ -17,6 +17,19 @@ async function triggerSync() {
   try {
     isSyncing = true;
     const { payload, totalUnsynced } = syncDao.getUnsyncedData();
+    console.log(
+  '[SyncService] Pending products:',
+  payload.products.map(product => ({
+    id: product.id,
+    name: product.name,
+    synced: product.synced
+  }))
+);
+
+console.log(
+  '[SyncService] Total pending:',
+  totalUnsynced
+);
 
     if (totalUnsynced === 0) {
       return { success: true, message: 'Already up to date', pushed: 0 };

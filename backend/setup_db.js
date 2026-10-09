@@ -5,11 +5,13 @@ require('dotenv').config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: false
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 async function runSetup() {
-  console.log('[Setup] Connecting to local PostgreSQL database...');
+  console.log('[Setup] Connecting to Supabase PostgreSQL database...');
 
   let client;
 

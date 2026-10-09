@@ -59,7 +59,7 @@ function Sidebar() {
       <div className="sidebar-footer">
         <div className="sidebar-sync-status">
           <div className="sidebar-sync-dot" />
-          <span>Offline Mode</span>
+          <span>Local + Cloud Sync</span>
         </div>
       </div>
     </aside>
